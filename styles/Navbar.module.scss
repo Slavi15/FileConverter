@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
+
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        text-transform: uppercase;
+        font-family: 'Rubik Mono One', sans-serif;
+        font-size: 24px;
+        background-image: linear-gradient(45deg, #C5E063, #507255);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        margin: auto 50px;
+        cursor: pointer;
+    }
+
+    .navlinks {
+        margin: auto 50px;
+        display: flex;
+
+        .links {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: auto 20px;
+            cursor: pointer;
+        }
+
+        .divider {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            margin: auto 10px;
+            font-weight: bold;
+            position: relative;
+        }
+    }
+}

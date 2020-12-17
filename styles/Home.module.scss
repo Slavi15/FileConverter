@@ -1,0 +1,33 @@
+$amazon: #507255;
+$may-green: #488B49;
+$green-pantone: #4AAD52;
+$bud-green: #6EB257;
+$yellow: #C5E063;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
+
+.slogan {
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    margin: 110px auto auto 120px;
+    width: 50%;
+}
+.desc {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bold;
+    margin: 20px auto auto 130px;
+    font-size: 18px;
+    width: 27.5%;
+}
+.button {
+    margin: 50px auto auto 130px;
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 15.5px;
+    font-family: 'Fredoka One', cursive;
+    background-color: $yellow;
+    border: 2px solid $bud-green;
+    cursor: pointer;
+}
