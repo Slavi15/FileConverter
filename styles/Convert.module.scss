@@ -1,0 +1,13 @@
+$amazon: #507255;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.convslogan {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    margin: 20px auto;
+    font-size: 30px;
+    color: $amazon;
+    letter-spacing: 1px;
+    font-style: italic;
+}

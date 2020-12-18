@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <title>File Converter</title>
+                <title>convertle</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Navbar />

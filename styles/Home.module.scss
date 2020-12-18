@@ -12,6 +12,7 @@ $yellow: #C5E063;
     font-size: 60px;
     margin: 110px auto auto 120px;
     width: 50%;
+    color: $amazon;
 }
 .desc {
     font-family: 'Alegreya Sans SC', sans-serif;
@@ -27,6 +28,7 @@ $yellow: #C5E063;
     text-transform: uppercase;
     font-size: 15.5px;
     font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
     background-color: $yellow;
     border: 2px solid $bud-green;
     cursor: pointer;

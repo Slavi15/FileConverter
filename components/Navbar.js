@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className={styles.navbar}>
-                <Link href="/"><div className={styles.logo}>File Converter</div></Link>
+                <Link href="/"><div className={styles.logo}>Convertle</div></Link>
                 <div className={styles.navlinks}>
                     <Link href="/convert"><div className={styles.links}>Convert</div></Link>
                     <Link href="/about"><div className={styles.links}>About</div></Link>
