@@ -8,8 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.21.0",
     "convertapi": "^1.7.0",
+    "convertapi-js": "^1.0.6",
     "dotenv": "^8.2.0",
     "mongoose": "^5.11.8",
     "next": "10.0.3",
@@ -17,6 +24,7 @@
     "progressbar.js": "^1.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-dropzone": "^11.2.4"
+    "react-dropzone": "^11.2.4",
+    "styled-components": "^5.2.1"
   }
 }

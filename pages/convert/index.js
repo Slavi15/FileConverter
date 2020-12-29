@@ -9,3 +9,5 @@ const Convert = () => {
 }
 
 export default Convert;
+
+//  fname.slice((fname.lastIndexOf(".") - 1 >>> 0) + 2);    check file extension

@@ -1,3 +1,4 @@
+$amazon: #507255;
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
 
@@ -17,29 +18,64 @@
         background-clip: text;
         -webkit-text-fill-color: transparent; 
         -moz-text-fill-color: transparent;
-        margin: auto 50px;
+        margin: auto 40px;
+        cursor: pointer;
+    }
+
+    .burger {
+        font-size: 30px;
+        color: $amazon;
+        margin: auto 40px;
         cursor: pointer;
     }
 
     .navlinks {
-        margin: auto 50px;
+        position: fixed;
         display: flex;
+        flex-direction: column;
+        color: whitesmoke;
+        align-items: center;
+        height: 100%;
+        width: 0;
+        overflow-x: hidden;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #282828;
+        padding-top: 10px;
+        transition: 1.5s;
 
         .links {
             font-family: 'Alegreya Sans SC', sans-serif;
-            font-size: 17px;
+            font-size: 20px;
+            text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin: auto 20px;
+            margin: 80px auto;
             cursor: pointer;
         }
 
-        .divider {
-            font-family: 'Alegreya Sans SC', sans-serif;
-            margin: auto 10px;
-            font-weight: bold;
-            position: relative;
+        .times {
+            font-size: 30px;
+            color: whitesmoke;
+            margin: 30px auto;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .navbar {
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        .navlinks {
+            display: flex;
+            flex-direction: column-reverse;
+            .times {
+                padding-bottom: 20px;
+            }
         }
     }
 }

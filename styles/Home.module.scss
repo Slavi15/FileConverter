@@ -33,3 +33,33 @@ $yellow: #C5E063;
     border: 2px solid $bud-green;
     cursor: pointer;
 }
+@media screen and (max-width: 770px) {
+    .slogan {
+        text-align: center;
+        margin: 60px auto;
+        font-size: 37.5px;
+    }
+    .desc {
+        display: none;
+    }
+    .button {
+        margin: 50px auto;
+        display: block;
+    }
+}
+@media screen and (min-width: 771px) and (max-width: 1050px) {
+    .slogan {
+        text-align: center;
+        margin: 60px auto;
+        font-size: 60px;
+    }
+    .desc {
+        text-align: center;
+        margin: 60px auto;
+        font-size: 20px;
+    }
+    .button {
+        margin: 50px auto;
+        display: block;
+    }
+}
