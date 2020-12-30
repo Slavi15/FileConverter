@@ -1,5 +1,6 @@
 $amazon: #507255;
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
 
 .convslogan {
     text-align: center;
@@ -9,6 +10,54 @@ $amazon: #507255;
     color: $amazon;
     letter-spacing: 1px;
     font-style: italic;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+
+    .selectcontent {
+        margin: auto 45px;
+        width: 90px;
+        height: 30px;
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .arrow {
+        font-size: 30px;
+        color: #488B49;
+    }
+}
+
+.container {
+    width: 55%;
+    margin: 40px auto;
+    align-items: center;
+
+    .innercontainer {
+        border: black 3px dashed;
+        height: 100px;
+    }
+
+    .textcontent {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+        line-height: 100px;
+        vertical-align: middle;
+    }
+
+    .filestext {
+        font-family: 'Alegreya Sans SC', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px 10px;
+    }
 }
 
 @media screen and (max-width: 770px) {
