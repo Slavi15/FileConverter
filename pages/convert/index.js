@@ -3,19 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDropzone } from 'react-dropzone';
 
 const Convert = () => {
-    const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
+    const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
+        multiple: true,
+        accept: 'image/png, image/jpeg, image/jpg, image/gif, image/tiff, text/plain, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf'
+    });
 
     const files = acceptedFiles.map(file => (
-        <table>
-            <tr>
-                <th>File</th>
-                <th>Size</th>
-            </tr>
-            <tr>
-                <td>{file.path}</td>
-                <td>{file.size}</td>
-            </tr>
-        </table>
+        <div className={styles.filescontainer} key={file.path}>
+            <FontAwesomeIcon className={styles.filesicon} icon={['far', 'file']} /><div className={styles.filediv}>{file.path}</div>
+        </div>
     ));
     return (
         <div>
@@ -40,12 +36,13 @@ const Convert = () => {
             <section className={styles.container}>
                 <div className={styles.innercontainer} {...getRootProps()}>
                     <input {...getInputProps()} />
+                    <FontAwesomeIcon className={styles.file} icon={['far', 'file']} />
                     <div className={styles.textcontent}>Drag 'n' drop some files!</div>
                 </div>
-                <aside>
+                <div>
                     <div className={styles.filestext}>Files</div>
                     <div>{files}</div>
-                </aside>
+                </div>
             </section>
         </div>
     )

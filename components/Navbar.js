@@ -6,13 +6,16 @@ const Navbar = () => {
     const navSlide = () => {
         const nav = document.getElementById('nav');
         nav.style.width = '250px';
-        const main = document.getElementById('main');
+        const main = document.getElementsByTagName('body')[0];
         main.style.marginRight = '250px';
+        if(window.innerWidth < 660){
+            main.style.marginRight = '0';
+        }
     };
     const closeNav = () => {
         const nav = document.getElementById('nav');
         nav.style.width = '0';
-        const main = document.getElementById('main');
+        const main = document.getElementsByTagName('body')[0];
         main.style.marginRight = '0';
     };
     return (
@@ -22,18 +25,12 @@ const Navbar = () => {
                 <div className={styles.navlinks} id="nav">
                     <FontAwesomeIcon onClick={closeNav} className={styles.times} icon="times" />
                     <Link href="/convert"><div className={styles.links}>Convert</div></Link>
+                    <Link href="/merch"><div className={styles.links}>Merch</div></Link>
                     <Link href="/about"><div className={styles.links}>About</div></Link>
                     <Link href="/contact"><div className={styles.links}>Contact Us</div></Link>
                 </div>
                 <FontAwesomeIcon onClick={navSlide} className={styles.burger} icon="bars" />
             </div>
-            <style jsx>
-                {`
-                #main {
-                    transition: margin-right 1.5s;
-                }
-                `}
-            </style>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 $amazon: #507255;
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .convslogan {
     text-align: center;
@@ -16,7 +17,7 @@ $amazon: #507255;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 60px auto;
+    margin: 65px auto;
 
     .selectcontent {
         margin: auto 45px;
@@ -34,29 +35,59 @@ $amazon: #507255;
 }
 
 .container {
-    width: 55%;
-    margin: 40px auto;
+    width: 75%;
+    margin: 30px auto;
     align-items: center;
 
     .innercontainer {
-        border: black 3px dashed;
-        height: 100px;
+        border: #888888 2px solid;
+        border-radius: 12px;
+        margin: auto;
+        height: 220px;
+    }
+
+    .file {
+        font-size: 40px;
+        margin: 60px auto auto auto;
+        display: block;
     }
 
     .textcontent {
-        font-family: 'Alegreya Sans SC', sans-serif;
-        font-weight: bold;
+        font-family: 'Roboto Mono', monospace;
         font-size: 22px;
         text-align: center;
-        line-height: 100px;
-        vertical-align: middle;
+        margin: 20px auto auto auto;
     }
 
     .filestext {
-        font-family: 'Alegreya Sans SC', sans-serif;
+        font-family: 'Roboto Mono', monospace;
         font-size: 20px;
         font-weight: bold;
-        margin: 20px 10px;
+        margin: 15px auto;
+        text-align: center;
+    }
+}
+
+.filescontainer {
+    margin: 5px auto;
+    font-size: 17px;
+    line-height: 50px;
+    vertical-align: center;
+    width: 95%;
+    height: 50px;
+    border-radius: 5px;
+    border: #888888 1px solid;
+    display: flex;
+    align-items: center;
+
+    .filediv {
+        font-family: 'Roboto Mono', monospace;
+        margin: auto 5px;
+    }
+
+    .filesicon {
+        font-size: 28px;
+        margin: auto 30px;
     }
 }
 
