@@ -23,9 +23,9 @@ $amazon: #507255;
         margin: auto 45px;
         width: 90px;
         height: 30px;
-        font-family: 'Alegreya Sans SC', sans-serif;
+        font-family: 'Roboto Mono', monospace;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .arrow {
@@ -35,7 +35,7 @@ $amazon: #507255;
 }
 
 .container {
-    width: 75%;
+    width: 70%;
     margin: 30px auto;
     align-items: center;
 
@@ -89,6 +89,21 @@ $amazon: #507255;
         font-size: 28px;
         margin: auto 30px;
     }
+}
+
+.button {
+    margin: 50px auto;
+    width: 150px;
+    height: 50px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #C5E063;
+    border: 2px solid #6EB257;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 770px) {
