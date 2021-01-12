@@ -67,27 +67,43 @@ $amazon: #507255;
         text-align: center;
     }
 }
+.acceptedfiles {
+    margin: 10px auto;
 
-.filescontainer {
-    margin: 5px auto;
-    font-size: 17px;
-    line-height: 50px;
-    vertical-align: center;
-    width: 95%;
-    height: 50px;
-    border-radius: 5px;
-    border: #888888 1px solid;
-    display: flex;
-    align-items: center;
-
-    .filediv {
-        font-family: 'Roboto Mono', monospace;
-        margin: auto 5px;
+    .filescontainer {
+        margin: 7px auto;
+        font-size: 17px;
+        line-height: 50px;
+        vertical-align: center;
+        width: 95%;
+        height: 50px;
+        border-radius: 5px;
+        border: #888888 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .filediv {
+            font-family: 'Roboto Mono', monospace;
+            margin: auto 5px;
+        }
+        
+        .filesicon {
+            font-size: 28px;
+            margin: auto 40px;
+        }
+        
+        .timesicon {
+            font-size: 22px;
+            margin: auto 40px;
+            cursor: pointer;
+        }
     }
-
-    .filesicon {
-        font-size: 28px;
-        margin: auto 30px;
+    
+    .linecontainer {
+        height: 8px;
+        width: 90%;
+        margin: auto;
     }
 }
 
