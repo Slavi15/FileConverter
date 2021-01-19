@@ -5,14 +5,14 @@ dbConnection();
 
 export default async(req, res) => {
     const {
-        query: { _id },
+        query: { id },
         method
     } = req;
 
     switch(method) {
         case 'GET':
             try {
-                const upload = await Upload.findById(_id);
+                const upload = await Upload.findById(id);
                 res.status(200).json({ upload });
             } catch (err) {
                 res.status(400).json(err);
@@ -20,8 +20,8 @@ export default async(req, res) => {
         break;
         case 'DELETE':
             try {
-                await Upload.deleteOne({ _id: _id });
-                res.status(200).json({ message: 'Deleted' });
+                await Upload.findByIdAndDelete({ _id: id });
+                res.status(200).json({ message: `Deleted: ${id}` });
             } catch (err) {
                 res.status(400).json(err);
             }

@@ -19,7 +19,7 @@ export default async(req, res) => {
             const { path, size, type } = req.body;
             try {
                 const upload = await Upload.create({ path, size, type });
-                res.status(201).json({ upload });
+                res.status(201).json(upload);
             } catch (err) {
                 res.status(400).json(err);
             }
