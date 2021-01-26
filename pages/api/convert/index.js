@@ -10,7 +10,7 @@ export default async(req, res) => {
         case 'GET':
             try {
                 const upload = await Upload.find();
-                res.status(200).json(upload);
+                res.status(200).json(JSON.stringify(upload, null, 4));
             } catch (err) {
                 res.status(400).json(err);
             }

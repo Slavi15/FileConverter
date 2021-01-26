@@ -19,6 +19,7 @@
     "convertapi-js": "^1.0.6",
     "dotenv": "^8.2.0",
     "mongoose": "^5.11.8",
+    "mongoose-ttl": "0.0.3",
     "next": "10.0.3",
     "node-sass": "^5.0.0",
     "progressbar.js": "^1.1.0",

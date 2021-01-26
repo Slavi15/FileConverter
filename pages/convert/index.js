@@ -13,6 +13,7 @@ const Convert = () => {
                 size: acceptedFiles[i].size,
                 type: acceptedFiles[i].type
             };
+            console.log(acceptedFiles[i]);
 
             axios.post('http://localhost:3000/api/convert', data, { headers: { 'Content-Type': 'application/json' } })
             .then(res => {
@@ -22,7 +23,7 @@ const Convert = () => {
                         const bar = new ProgressBar.Line(container, {
                             strokeWidth: 0.5,
                             easing: 'easeInOut',
-                            duration: 1500,
+                            duration: 1200,
                             color: '#507255',
                             svgStyle: { 
                                 width: '100%', 
@@ -35,7 +36,7 @@ const Convert = () => {
                             to: { 
                                 color: '#507255' 
                             },
-                        step: (state, bar) => {
+                            step: (state, bar) => {
                                 bar.path.setAttribute('stroke', state.color);
                             }
                         });
@@ -43,19 +44,17 @@ const Convert = () => {
 
                         setTimeout(() => {
                             bar.destroy();
-                        }, 1700);
+                        }, 1400);
                     }, 200)
                 }
                 console.dir(res.data);
-                let removeFile = () => {
+                const removeFile = () => {
                     axios.delete(`http://localhost:3000/api/convert/${res.data._id}`)
                     .then(res => {
                         console.log(res.data);
                         if(res.data){
-                            /*
                             const element = document.getElementById('filetoremove');
                             element.parentNode.removeChild(element);
-                            */
                         }
                     })
                 }
@@ -69,15 +68,15 @@ const Convert = () => {
 
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
         onDrop,
-        multiple: true,
+        multiple: false,
         accept: 'image/png, image/jpeg, image/jpg, image/gif, image/tiff, text/plain, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf'
     });
-    
+
     const files = acceptedFiles.map(file => (
         <div className={styles.acceptedfiles} key={file.path}>
             <div className={styles.filescontainer} id="filetoremove">
                 <FontAwesomeIcon className={styles.filesicon} icon={['far', 'file']} /><div className={styles.filediv}>{file.path}</div>
-                <FontAwesomeIcon className={styles.timesicon} icon={['fas', 'times']} onClick={onDrop.removeFile} />
+                <FontAwesomeIcon className={styles.timesicon} icon={['fas', 'times']} onClick={() => { onDrop.removeFile() }} />
             </div>
             <div id="container" className={styles.linecontainer}></div>
         </div>
