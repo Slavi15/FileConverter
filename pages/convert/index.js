@@ -1,11 +1,14 @@
 import axios from 'axios';
 import styles from '../../styles/Convert.module.scss';
+import ConvertApi from '../../node_modules/convertapi-js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDropzone } from 'react-dropzone';
 import { useCallback } from 'react';
 const ProgressBar = require('progressbar.js');
 
 const Convert = () => {
+    const convertapi = ConvertApi.auth({ secret: process.env.CONVERT_API });
+
     const onDrop = useCallback(acceptedFiles => {
         for (let i = 0; i < acceptedFiles.length; i++) {
             const data = {
@@ -18,6 +21,7 @@ const Convert = () => {
             axios.post('http://localhost:3000/api/convert', data, { headers: { 'Content-Type': 'application/json' } })
             .then(res => {
                 if (res.data) {
+                    console.dir(res.data);
                     setTimeout(() => {
                         const container = document.getElementById('container');
                         const bar = new ProgressBar.Line(container, {
@@ -46,8 +50,17 @@ const Convert = () => {
                             bar.destroy();
                         }, 1400);
                     }, 200)
-                }
-                console.dir(res.data);
+                };
+
+                const convertFunction = () => {
+                    let params = convertapi.createParams();
+                    params.add('file', res.data);
+
+                    //let result = convertapi.convert(null, null, params);
+                    //console.log(result);
+                    console.log(params);
+                };
+
                 const removeFile = () => {
                     axios.delete(`http://localhost:3000/api/convert/${res.data._id}`)
                     .then(res => {
@@ -57,8 +70,9 @@ const Convert = () => {
                             element.parentNode.removeChild(element);
                         }
                     })
-                }
+                };
                 onDrop.removeFile = removeFile;
+                onDrop.convertFunction = convertFunction;
             })
             .catch(err => {
                 console.log(err);
@@ -86,7 +100,7 @@ const Convert = () => {
         <div>
             <div className={styles.convslogan}>Create, Select, Convert!</div>
             <div className={styles.select}>
-                <select name="files1" className={styles.selectcontent}>
+                <select name="files1" className={styles.selectcontent} id="selectList1">
                     <option value="select">Select</option>
                     <option value="txt">txt</option>
                     <option value="pdf">pdf</option>
@@ -94,7 +108,7 @@ const Convert = () => {
                     <option value="png">png</option>
                 </select>
                 <FontAwesomeIcon className={styles.arrow} icon="arrow-right" />
-                <select name="files2" className={styles.selectcontent}>
+                <select name="files2" className={styles.selectcontent} id="selectList2">
                     <option value="select">Select</option>
                     <option value="txt">txt</option>
                     <option value="pdf">pdf</option>
@@ -112,7 +126,7 @@ const Convert = () => {
                     <div>{files}</div>
                 </div>
             </section>
-            <button className={styles.button}>Convert</button>
+            <button className={styles.button} onClick={() => { onDrop.convertFunction() }}>Convert</button>
         </div>
     )
 }

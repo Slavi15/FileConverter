@@ -15,9 +15,9 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.21.1",
-    "convertapi": "^1.9.1",
     "convertapi-js": "^1.0.6",
     "dotenv": "^8.2.0",
+    "loader-utils": "^2.0.0",
     "mongoose": "^5.11.8",
     "mongoose-ttl": "0.0.3",
     "next": "10.0.3",
@@ -27,5 +27,8 @@
     "react-dom": "17.0.1",
     "react-dropzone": "^11.2.4",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "exports-loader": "^2.0.0"
   }
 }
