@@ -24,10 +24,10 @@ const Navbar = () => {
                 <Link href="/"><div className={styles.logo}>Convertle</div></Link>
                 <div className={styles.navlinks} id="nav">
                     <FontAwesomeIcon onClick={closeNav} className={styles.times} icon="times" />
+                    <Link href="/"><div className={styles.links}>Home</div></Link>
                     <Link href="/convert"><div className={styles.links}>Convert</div></Link>
-                    <Link href="/merch"><div className={styles.links}>Merch</div></Link>
-                    <Link href="/about"><div className={styles.links}>About</div></Link>
-                    <Link href="/contact"><div className={styles.links}>Contact Us</div></Link>
+                    <Link href="/test"><div className={styles.links}>Test</div></Link>
+                    <Link href="/test"><div className={styles.links}>Test</div></Link>
                 </div>
                 <FontAwesomeIcon onClick={navSlide} className={styles.burger} icon="bars" />
             </div>

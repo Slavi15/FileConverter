@@ -17,7 +17,7 @@ $amazon: #507255;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 65px auto;
+    margin: 50px auto;
 
     .selectcontent {
         margin: auto 45px;
@@ -105,8 +105,19 @@ $amazon: #507255;
     }
 }
 
+.result {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 17.5px;
+    text-align: center;
+
+    .resultlink {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 17px;
+    }
+}
+
 .button {
-    margin: 50px auto;
+    margin: 40px auto 10px auto;
     width: 150px;
     height: 50px;
     display: block;
