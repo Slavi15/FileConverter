@@ -102,18 +102,23 @@ const Convert = () => {
                 <select name="files1" defaultValue="select" className={styles.selectcontent} id="selectList1">
                     <option value="select" disabled>Select</option>
                     <option value="txt">txt</option>
-                    <option value="pdf">pdf</option>
                     <option value="jpg">jpg</option>
                     <option value="png">png</option>
+                    <option value="pdf">pdf</option>
+                    <option value="docx">docx</option>
                     <option value="pptx">pptx</option>
+                    <option value="xlsx">xlsx</option>
                 </select>
                 <FontAwesomeIcon className={styles.arrow} icon="arrow-right" />
                 <select name="files2" defaultValue="select" className={styles.selectcontent} id="selectList2">
                     <option value="select" disabled>Select</option>
                     <option value="txt">txt</option>
-                    <option value="pdf">pdf</option>
                     <option value="jpg">jpg</option>
                     <option value="png">png</option>
+                    <option value="pdf">pdf</option>
+                    <option value="docx">docx</option>
+                    <option value="pptx">pptx</option>
+                    <option value="xlsx">xlsx</option>
                 </select>
             </div>
             <section className={styles.container}>
