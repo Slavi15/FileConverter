@@ -14,7 +14,7 @@ const Convert = () => {
 
     const onDrop = useCallback(acceptedFiles => {
         for (let i = 0; i < acceptedFiles.length; i++) {
-            console.dir(acceptedFiles[i]);
+            //console.dir(acceptedFiles[i]);
             
             setTimeout(() => {
                 const container = document.getElementById('container');
@@ -44,7 +44,7 @@ const Convert = () => {
                 }, 900);
             }, 100);
 
-            const convertFunction = () => {
+            const convertFunction = async() => {
                 const convertapi = ConvertApi.auth({ secret: publicRuntimeConfig.CONVERT_API });
 
                 const params = convertapi.createParams();
@@ -56,9 +56,9 @@ const Convert = () => {
                 let option1 = list1.options[list1.selectedIndex].value;
                 let option2 = list1.options[list2.selectedIndex].value;
 
-                const result = convertapi.convert(option1, option2, params)
+                const result = await convertapi.convert(option1, option2, params)
                 .then(res => {
-                    console.dir(res.dto.Files[0].Url);
+                    //console.dir(res.dto.Files[0]);
 
                     const resultLink = document.getElementById('resultlink');
                     const resultTag = document.getElementById('result');
@@ -72,8 +72,8 @@ const Convert = () => {
                                     
                 })
     
-                console.dir(params);
-                console.dir(result);
+                //console.dir(params);
+                //console.dir(result);
             };               
             onDrop.convertFunction = convertFunction;
         }
