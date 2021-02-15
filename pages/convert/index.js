@@ -74,15 +74,37 @@ const Convert = () => {
     
                 //console.dir(params);
                 //console.dir(result);
-            };               
+            };     
+            
+            const removeFile = () => {
+                const element = document.getElementById('filetoremove');
+                element.parentNode.removeChild(element);
+            };
+
             onDrop.convertFunction = convertFunction;
+            onDrop.removeFile = removeFile;
         }
     }, []);
 
     const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
         onDrop,
         multiple: false,
-        accept: 'image/png, image/jpeg, image/jpg, image/gif, image/tiff, text/plain, application/vnd.ms-powerpoint, application/vnd.openxmlformats-officedocument.presentationml.presentation, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf'
+        accept:
+            [   
+                'image/png', 
+                'image/jpeg', 
+                'image/jpg', 
+                'image/gif', 
+                'image/tiff', 
+                'text/plain', 
+                'application/vnd.ms-powerpoint', 
+                'application/vnd.openxmlformats-officedocument.presentationml.presentation', 
+                'application/msword', 
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'application/vnd.ms-excel',
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'application/pdf' 
+            ]
     });
 
     const files = acceptedFiles.map(file => (
@@ -105,8 +127,11 @@ const Convert = () => {
                     <option value="jpg">jpg</option>
                     <option value="png">png</option>
                     <option value="pdf">pdf</option>
+                    <option value="doc">doc</option>
                     <option value="docx">docx</option>
+                    <option value="ppt">ppt</option>
                     <option value="pptx">pptx</option>
+                    <option value="xls">xls</option>
                     <option value="xlsx">xlsx</option>
                 </select>
                 <FontAwesomeIcon className={styles.arrow} icon="arrow-right" />
