@@ -142,7 +142,6 @@ const Convert = () => {
                     <option value="docx">docx</option>
                     <option value="pptx">pptx</option>
                     <option value="xlsx">xlsx</option>
-                    <option value="repair">repair</option>
                 </select>
             </div>
             <section className={styles.container}>
