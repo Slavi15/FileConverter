@@ -59,10 +59,8 @@ const Convert = () => {
                 const result = await convertapi.convert(option1, option2, params)
                 .then(res => {
                     //console.dir(res.dto.Files[0]);
-
                     const resultLink = document.getElementById('resultlink');
                     const resultTag = document.getElementById('result');
-
 
                     if(res) {
                         resultLink.setAttribute('href', res.dto.Files[0].Url);
@@ -70,7 +68,7 @@ const Convert = () => {
                         resultTag.style.display = 'block';
                     };
                                     
-                })
+                });
     
                 //console.dir(params);
                 //console.dir(result);
@@ -144,6 +142,7 @@ const Convert = () => {
                     <option value="docx">docx</option>
                     <option value="pptx">pptx</option>
                     <option value="xlsx">xlsx</option>
+                    <option value="repair">repair</option>
                 </select>
             </div>
             <section className={styles.container}>
