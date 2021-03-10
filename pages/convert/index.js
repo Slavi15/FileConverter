@@ -102,8 +102,7 @@ const Convert = () => {
                 'application/vnd.ms-excel',
                 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
                 'application/pdf',
-                'application/epub+zip',
-                'application/x-mobipocket-ebook'
+                'application/epub+zip'
             ]
     });
 
@@ -145,7 +144,6 @@ const Convert = () => {
                     <option value="docx">docx</option>
                     <option value="pptx">pptx</option>
                     <option value="xlsx">xlsx</option>
-                    <option value="mobi">mobi</option>
                 </select>
             </div>
             <section className={styles.container}>
