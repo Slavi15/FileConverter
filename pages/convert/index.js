@@ -101,7 +101,9 @@ const Convert = () => {
                 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
                 'application/vnd.ms-excel',
                 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-                'application/pdf' 
+                'application/pdf',
+                'application/epub+zip',
+                'application/x-mobipocket-ebook'
             ]
     });
 
@@ -131,6 +133,7 @@ const Convert = () => {
                     <option value="pptx">pptx</option>
                     <option value="xls">xls</option>
                     <option value="xlsx">xlsx</option>
+                    <option value="epub">epub</option>
                 </select>
                 <FontAwesomeIcon className={styles.arrow} icon="arrow-right" />
                 <select name="files2" defaultValue="select" className={styles.selectcontent} id="selectList2">
@@ -142,6 +145,7 @@ const Convert = () => {
                     <option value="docx">docx</option>
                     <option value="pptx">pptx</option>
                     <option value="xlsx">xlsx</option>
+                    <option value="mobi">mobi</option>
                 </select>
             </div>
             <section className={styles.container}>
